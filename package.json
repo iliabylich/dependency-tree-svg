@@ -1,0 +1,14 @@
+{
+  "name": "dependency-tree-svg",
+  "version": "1.0.0",
+  "scripts": {
+    "build:dev": "esbuild assets/main.ts --watch --bundle --outfile=assets/output.js",
+    "build:release": "esbuild assets/main.ts --bundle --minify --outfile=assets/output.js",
+    "test:node": "esbuild assets/tests.ts --platform=node --bundle --outfile=assets/tests.js && node assets/tests.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "20.14.10",
+    "esbuild": "0.23.0"
+  }
+}
